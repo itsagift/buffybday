@@ -9,20 +9,37 @@
     
 </head>
 <body>
-    <h2>Birth Month</h2>
-        <select id = "month">
-            <option value = "1">January</option>
-            <option value = "2">February</option>
-            <option value = "3">March</option>
-            <option value = "4">April</option>
-            <option value = "5">May</option>
-            <option value = "6">June</option>
-            <option value = "7">July</option>
-            <option value = "8">August</option>
-            <option value = "9">September</option>
-            <option value = "10">October</option>
-            <option value = "11">November</option>
-            <option value = "12">December</option>
-        </select>
+    <form class="main">
+        <div class="main__month">
+            <h2>Birth Month</h2>
+                <select id = "month">
+                    <option value = "1">January</option>
+                    <option value = "2">February</option>
+                    <option value = "3">March</option>
+                    <option value = "4">April</option>
+                    <option value = "5">May</option>
+                    <option value = "6">June</option>
+                    <option value = "7">July</option>
+                    <option value = "8">August</option>
+                    <option value = "9">September</option>
+                    <option value = "10">October</option>
+                    <option value = "11">November</option>
+                    <option value = "12">December</option>
+                </select>
+        </div>
+        <div class="main__day">
+            <h2>Birth Day</h2>
+            <input type="number" id="date" name="date"/>
+        </div>
+        <div class="main__year">
+            <h2>Birth Year</h2>
+            <input type="number" id="year" name="year"/>
+        </div>
+        <div class="main__submit">
+            <h2>Submit</h2>
+            <input type="button" id="submit" value="Calculate" onClick="ageCalculate()"/>
+        </div>
+    </form>
+    <script src="script.js"></script>
 </body>
 </html>
