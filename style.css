@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+  background-color: #29404A;
+  background-image: ;
+  color: #fff;
+}
 .main {
     margin: 100px auto 0;
     display: flex;
