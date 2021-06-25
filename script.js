@@ -1,6 +1,4 @@
-let episodes = [
-    {"episodeName":"Welcome to the Hellmouth","episodeDate": new Date(1997, 3, 10)},
-{"episodeName":"The Harvest","episodeDate": new Date(1997, 2, 10)},
+let episodes = [{"episodeName":"Welcome to the Hellmouth / The Harvest", "seasonNumber": "Season 1", "episodeNumber":"Episode 1 & 2","episodeImg":"s1e1", "episodeDate": new Date(1997, 2, 10)},
 {"episodeName":"Witch","episodeDate": new Date(1997, 2, 17)},
 {"episodeName":"Teacher's Pet","episodeDate": new Date(1997, 2, 24)},
 {"episodeName":"Never Kill a Boy on the First Date","episodeDate": new Date(1997, 2, 31)},
@@ -146,6 +144,9 @@ let episodes = [
 
 
 function ageCalculate(){
+    var resultBlock = document.getElementById("result");
+    resultBlock.style.display = "block";
+    
     var day = document.getElementById("day").value;
     var month = document.getElementById("month").value;
     var year = document.getElementById("year").value;
@@ -153,13 +154,18 @@ function ageCalculate(){
     var concatDate = year + ", " + month + ", " + day;
     var concatDate = new Date(concatDate);
     var concatDate = concatDate.getTime();
-    
-    episodes.forEach(function(episode) {
-        if (episode.episodeDate.getTime() > concatDate) {
-            console.log(episode);
-        }
-    });
+    function difference(a, b) {
+        return Math.abs(a - b);
+    }
+
+    let sortedDates = episodes.sort((c2, c1) => (difference(c1.episodeDate.getTime(), concatDate) < difference(c2.episodeDate.getTime(), concatDate)) ? 1 : (difference(c1.episodeDate.getTime(), concatDate) > difference(c2.episodeDate.getTime(), concatDate)) ? -1 : 0);
+    var episodeInfoDOM = (sortedDates[0]).seasonNumber + ", " + (sortedDates[0]).episodeNumber;
+    console.log(episodeInfoDOM);
+    document.getElementById("result__info").innerHTML = (episodeInfoDOM);
+    document.getElementById("result__title").innerHTML = ((sortedDates[0]).episodeName);
+    var imgURL = "/assets/" + (sortedDates[0]).episodeImg + ".jpeg";
+    console.log(imgURL);
+    document.getElementById("imageid").src= imgURL;
     
 };
-
 

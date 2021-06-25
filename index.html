@@ -6,41 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>buffy zodiac</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form class="main">
-        <div class="main__month">
-            <h2>Birth Month</h2>
-                <select id = "month">
-                    <option value = "1">January</option>
-                    <option value = "2">February</option>
-                    <option value = "3">March</option>
-                    <option value = "4">April</option>
-                    <option value = "5">May</option>
-                    <option value = "6">June</option>
-                    <option value = "7">July</option>
-                    <option value = "8">August</option>
-                    <option value = "9">September</option>
-                    <option value = "10">October</option>
-                    <option value = "11">November</option>
-                    <option value = "12">December</option>
-                </select>
+   <div class="header">
+       <img class="header__logo" src="assets/buffylogo.svg" />
+       <div class="header__text">birthday episode</div>
+   </div>
+   
+    <div class="main">
+        <div class="info">
+            Have you ever wondered what Buffy episode aired on your date of birth, and what that says about you? Of course you have. If you were born between March 1997 and May 2003, you can find out. If you weren't, you can find out which one aired near your birthday. Is this too niche? Maybe!
         </div>
-        <div class="main__day">
-            <h2>Birth Day</h2>
-            <input type="number" id="day" name="day"/>
+        <div class="main__form">
+            <div class="main__month input">
+                <input type="number" class="input__box" id="month" name="month" min="1" max="12"/>
+                <label class="input__label" for="month">Month</label>
+            </div>
+            <div class="main__day input">
+                <input type="number" class="input__box" id="day" name="day" min="1" max="31"/>
+                <label class="input__label" for="day">Day</label>
+            </div>
+            <div class="main__year input">
+                <input type="number" class="input__box" id="year" name="year" min="1900" max="2021"/>
+                <label class="input__label" for="year">Year</label>
+            </div>
+            <div class="main__submit input">
+                <input type="button" class="input__submit" id="submit" name="submit" value="Submit" onClick="ageCalculate()"/>
+                <label class="input__label" for="submit">&nbsp;</label>
+            </div>
         </div>
-        <div class="main__year">
-            <h2>Birth Year</h2>
-            <input type="number" id="year" name="year"/>
+        <div class="result" id="result"> 
+            <div class="result--flex">
+                <div class="result__title" id="result__title">Testing</div> 
+                <div class="result__info" id="result__info"></div>
+                <img class="result__image" src="" id="imageid"/>
+            </div>
         </div>
-        <div class="main__submit">
-            <h2>Submit</h2>
-            <input type="button" id="submit" value="Calculate" onClick="ageCalculate()"/>
-        </div>
-    </form>
-    <div id="demo"></div>
+    </div>
+    
+    
     <script src="script.js"></script>
 </body>
 </html>
