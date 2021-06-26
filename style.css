@@ -65,7 +65,9 @@ body{
   display: flex;
   margin-right: 5%;
   flex-direction: column;
+  max-width:20%;
 }
+
 .input__box{
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
