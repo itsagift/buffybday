@@ -18,32 +18,42 @@
    
     <div class="main">
         <div class="info">
-            Have you ever wondered what Buffy episode aired on your date of birth, and what that says about you? Of course you have. If you were born between March 1997 and May 2003, you can find out. If you weren't, you can find out which one aired near your birthday. Is this too niche? Maybe!
+            Have you ever wondered what Buffy episode aired on your date of birth, and what that says about you? Of course you have. If you were born between March 1997 and May 2003, you can find out. Is this too niche? Maybe!
+
+            (Possible spoilers for both Buffy and Angel.)
         </div>
-        <div class="main__form">
+        <form class="main__form">
             <div class="main__month input">
-                <input type="number" class="input__box" id="month" name="month" min="1" max="12"/>
+                <input type="number" class="input__box" id="month" name="month" min="1" max="12" required/>
                 <label class="input__label" for="month">Month</label>
             </div>
             <div class="main__day input">
-                <input type="number" class="input__box" id="day" name="day" min="1" max="31"/>
+                <input type="number" class="input__box" id="day" name="day" min="1" max="31" required/>
                 <label class="input__label" for="day">Day</label>
             </div>
             <div class="main__year input">
-                <input type="number" class="input__box" id="year" name="year" min="1900" max="2021"/>
+                <input type="number" class="input__box" id="year" name="year" min="1900" max="2021" required/>
                 <label class="input__label" for="year">Year</label>
             </div>
             <div class="main__submit input">
-                <input type="button" class="input__submit" id="submit" name="submit" value="Submit" onClick="ageCalculate()"/>
+                <input type="button" class="input__submit" id="submit" name="submit" value="Submit"onClick="ageCalculate()"/>
                 <label class="input__label" for="submit">&nbsp;</label>
             </div>
-        </div>
+        </form>
         <div class="result" id="result"> 
-            <div class="result--flex">
-                <div class="result__title" id="result__title">Testing</div> 
-                <div class="result__info" id="result__info"></div>
+            <div class="result--grid">
                 <img class="result__image" src="" id="imageid"/>
+                <div class="result--flex">
+                    <div class="result__title" id="result__title">Testing</div>
+                    <div class="result__info">
+                        <div class="ep" id="ep__number"></div>
+                        <div class="ep" id="ep__date"></div>
+                    </div>
+                    <div class="result__desc" id="result__desc"> </div>
+                </div>
             </div>
+                
+                
         </div>
     </div>
     
