@@ -63,9 +63,8 @@ body{
 }
 .input{
   display: flex;
-  margin-right: 5%;
   flex-direction: column;
-  max-width:20%;
+  margin-right: 5%;
 }
 
 .input__box{
@@ -168,12 +167,22 @@ input[type=number] {
       margin: 20px 5% 0;
     
   }
+  .input{
+    margin-right: 0;
+  }
+  .main__month{
+    margin-right: 10px;
+  }
+  .main__day{
+    margin-right:10px;
+  }
   .main__form{
     display: flex;
     flex-wrap: wrap;
     
   }
-  .input__submit{
-    width:200px;
+  .main__submit{
+    width:60vw;
+    align-self: center;
   }
   }
