@@ -141,6 +141,14 @@ body::after {
   width: 200px;
   grid-column: 1 / 2;
 }
+.attribution{
+  text-align: center;
+  margin-top:50px;
+}
+.attribution a{
+  text-decoration: none;
+  color:lightcoral;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
