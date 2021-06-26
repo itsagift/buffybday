@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Herculanum';
+    src: url('Herculanum.woff2') format('woff2'),
+        url('Herculanum.woff') format('woff'),
+        url('Herculanum.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

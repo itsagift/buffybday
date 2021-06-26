@@ -276,7 +276,6 @@ let episodes = [{
 function ageCalculate(){
     var resultBlock = document.getElementById("result");
     resultBlock.style.display = "block";
-    document.body.classList.add("stretch");
     
     var day = document.getElementById("day").value;
     var month = document.getElementById("month").value;
@@ -304,35 +303,37 @@ function ageCalculate(){
         document.getElementById("result__desc").innerHTML = (episodeDescDOM);
         document.getElementById("imageid").src= imgURL;
     }
-    else if ((year <= 1997 || year >= 2003) || month === 1){
+    else if ((year <= 1997 || year >= 2003) && month === 1){
         document.getElementById("result__title").innerHTML = "";
         document.getElementById("result__desc").innerHTML = "You weren't born between 1997-2003, but you were born the same month as Buffy Summers, whose birthday is January 19, 1981. As Buffy says, she is a 'Capricorn on the cusp of Aquarius'. Hopefully your birthdays are less tragic!";
         document.getElementById("imageid").src= ("/assets/buffy.jpeg");
     }
-    else if ((year <= 1997 || year >= 2003) ||month === 10){
+    else if ((year <= 1997 || year >= 2003) && month === 10){
+        document.getElementById("result__title").innerHTML = "";
         document.getElementById("result__desc").innerHTML = "You weren't born between 1997-2003, but you were born the same month as Tara Maclay, whose birthday is October 16, 1980. If you're anything like her, you're a Libra with a very kind, beautiful heart.";
         document.getElementById("imageid").src= ("/assets/tara.jpeg");
     }
-    else if ((year <= 1997 || year >= 2003) || month === 12){
+    else if ((year <= 1997 || year >= 2003) && month === 12){
         document.getElementById("result__desc").innerHTML = "You weren't born between 1997-2003, but you were born the same month as Cordelia Chase. Despite an entire Angel episode about Cordy's birthday, aptly entitled 'Birthday', there is no concrete date set, but we know it's in December. Hopefully you'll get to star in a alternate universe TV show about your life one day.";
         document.getElementById("imageid").src= ("/assets/cordy.jpeg");
     }
-    else if ((year <= 1997 || year >= 2003) || month === 7){
+    else if ((year <= 1997 || year >= 2003) && month === 7){
         document.getElementById("result__desc").innerHTML = "You weren't born between 1997-2003, but you were born the same month as Anya's fake birthday. Anya was really born in medieval Europe before the advent of the Gregorian Calendar, but to pose as a regular human and not an ex-vengeance demon, she's adopted July 4th as her official birthday. And don't think there weren't jokes about that her whole life, Mister, because there were.";
         document.getElementById("imageid").src= ("/assets/anya.jpeg");
     }
-    else if ((year <= 1997 || year >= 2003) || month === 9){
+    else if ((year <= 1997 || year >= 2003) && month === 9){
         document.getElementById("result__desc").innerHTML = "You weren't born between 1997-2003, but you were born the same month that Dawn entered the Buffyverse canon, and entered all of the characters memories. So, kind of like a birthday! You are as precious and bright as any key.";
         document.getElementById("imageid").src= ("/assets/dawn.jpeg");
     }
-    else if ((year <= 1997 || year >= 2003) || month === 11){
+    else if ((year <= 1997 || year >= 2003) && month === 11){
+        document.getElementById("result__title").innerHTML = "";
         document.getElementById("result__desc").innerHTML = "You weren't born between 1997-2003, but you were born the same month as Connor! Undoubtedly your favourite character. He was a cute baby.";
         document.getElementById("imageid").src= ("/assets/connor.jpeg");
     }
-    else {
+    else if (year <= 1997 || year >= 2003) {
         document.getElementById("result__title").innerHTML = "Oops!";
         document.getElementById("result__desc").innerHTML = "You weren't born between the years of 1997-2003, which means you're not a True Zoomer, but also that I can't calculate an episode. More options coming soon!";
-        document.getElementById("imageid").src= ("data;");
+        document.getElementById("imageid").src= ("https://i.gifer.com/PQSv.gif");
     }
     
 };
