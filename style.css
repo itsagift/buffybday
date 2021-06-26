@@ -25,14 +25,21 @@ body{
   justify-content: center;
   align-items: center;
 }
-.header__text{
+.header a{
   font-family: 'Herculanum', Arial;
-  width:150px;
-  text-align:left;
-  font-weight: 300;
+  color: #fff;
   font-size: 28px;
   line-height: 28px;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+}
+.header__text{
+  
+  width:150px;
+  text-align:left;
+  
 }
 .info{
   color:#fff;
