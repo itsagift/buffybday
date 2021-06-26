@@ -187,5 +187,6 @@ input[type=number] {
   }
   .result__title{
     margin-top:20px;
+    line-height:120%;
   }
   }
