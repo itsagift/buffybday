@@ -286,14 +286,13 @@ function ageCalculate(){
     var month = minTwoDigits(month);
     var day = minTwoDigits(day);
     var concatDate = year + "-" + month + "-" + day;
-    console.log(concatDate);
+    
     var concatDate = new Date(concatDate.replace(/-/g, "/"));
     var concatDate = concatDate.getTime();
     function difference(a, b) {
         return Math.abs(a - b);
     }
 
-    console.log(concatDate);
 
     if (year >= 1997 && year <= 2003){ 
         let sortedDates = episodes.sort((c2, c1) => (difference(c1.episodeDate.getTime(), concatDate) < difference(c2.episodeDate.getTime(), concatDate)) ? 1 : (difference(c1.episodeDate.getTime(), concatDate) > difference(c2.episodeDate.getTime(), concatDate)) ? -1 : 0);
