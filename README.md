@@ -1,4 +1,4 @@
-# buffybday
+# Buffy Bday
 
 A zodiac calculator-type app based on the television show Buffy the Vampire Slayer.
 
